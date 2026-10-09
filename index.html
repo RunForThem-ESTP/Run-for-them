@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Run For Them ESTP – Association de course à pied de l’ESTP</title>
+  <meta name="description" content="Run For Them est l’association étudiante de course à pied de l’ESTP. Entraînements hebdomadaires et course caritative annuelle au Parc de Sceaux au profit de la Fondation du Souffle.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Run For Them ESTP">
+  <meta property="og:title" content="Run For Them ESTP – Association de course à pied de l’ESTP">
+  <meta property="og:description" content="Run For Them est l’association étudiante de course à pied de l’ESTP. Entraînements hebdomadaires et course caritative annuelle au Parc de Sceaux au profit de la Fondation du Souffle.">
+  <meta name="theme-color" content="#231c6e">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="lien-evitement" href="#contenu">Aller au contenu</a>
+
+  <!-- ===== EN-TÊTE (identique sur toutes les pages) ===== -->
+  <header class="entete">
+    <div class="entete__barre">
+      <a class="marque" href="index.html">
+        <img src="assets/img/logo-rft.png" alt="" width="480" height="480">
+        <span>RUN FOR THEM ESTP</span>
+      </a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Ouvrir le menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    <nav class="nav" id="navigation" aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html" aria-current="page">Accueil</a></li>
+        <li class="nav__item-sous">
+          <div class="nav__groupe">
+            <a href="course-2027.html">Course 2027</a>
+            <button class="nav__sous-bouton" type="button" aria-expanded="false" aria-controls="sous-menu-course" aria-label="Afficher les éditions précédentes"><svg class="nav__fleche" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+          </div>
+          <ul class="nav__sous-menu" id="sous-menu-course">
+            <li><a href="edition-2026.html">Run For Them Édition 2026</a></li>
+            <li><a href="edition-2025.html">Run For Them Édition 2025</a></li>
+          </ul>
+        </li>
+        <li><a href="entrainements.html">Entraînements</a></li>
+        <li><a href="partenaires.html">Partenaires</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <h1 class="visuellement-cache">Run For Them ESTP – association étudiante de course à pied</h1>
+
+    <!-- Qui sommes-nous ? -->
+    <section class="heros" style="background-image: url('assets/img/accueil-coureurs.jpg');">
+      <div class="heros__panneau">
+        <div class="heros__texte">
+          <h2>Qui sommes-nous ?</h2>
+          <p>Run For Them est l’association étudiante de course à pied de l’École Supérieure des Travaux Publics. Nous proposons des entraînements hebdomadaires variés (séance sur piste, fractionné, footing…), afin de permettre à tous les étudiants de pratiquer la course à pied, qu’ils soient débutants ou initiés.</p>
+          <p>Chaque année, nous organisons une course chronométrée (5 km &amp; 10 km), ouverte à tous au Parc de Sceaux. L’ensemble des bénéfices de cette course est reversé à la Fondation du Souffle.</p>
+          <a class="bouton" href="entrainements.html">Nos entraînements</a>
+        </div>
+        <div class="heros__logo"><img src="assets/img/logo-rft.png" alt="Logo Run For Them – ESTP Running Club" width="480" height="480"></div>
+        <div class="heros__vertical" aria-hidden="true">RUN FOR THEM</div>
+      </div>
+    </section>
+
+    <!-- La course annuelle -->
+    <section class="section">
+      <div class="conteneur duo">
+        <div class="duo__media"><img src="assets/img/parc-perspective.jpg" alt="La grande perspective du Parc de Sceaux vue depuis le château" width="1600" height="1066" loading="lazy" decoding="async"></div>
+        <div>
+          <h2>RUN FOR THEM</h2>
+          <h3>Une course annuelle au Parc de Sceaux</h3>
+          <p class="chapeau">Notre association organise chaque année une course chronométrée au Parc de Sceaux. Tous les fonds récoltés à l’issue de cet événement sont reversés à la <a href="https://www.lesouffle.org" target="_blank" rel="noopener">Fondation du Souffle</a>.</p>
+          <a class="bouton" href="course-2027.html">En savoir plus sur notre course</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fondation du Souffle -->
+    <section class="section section--creme" id="fondation">
+      <div class="conteneur duo">
+        <div class="duo__media duo__media--rond"><img src="assets/img/fondation-souffle.png" alt="Logo de la Fondation du Souffle" width="600" height="600" loading="lazy" decoding="async"></div>
+        <div class="fondation__texte">
+          <h2 class="visuellement-cache">La Fondation du Souffle</h2>
+          <p>La Fondation du Souffle, reconnue d’utilité publique, se mobilise au quotidien sur plusieurs fronts pour lutter contre toutes les maladies respiratoires et les agresseurs du souffle comme la pollution, le tabac…</p>
+          <p>Elle est la seule fondation exclusivement dédiée à la lutte contre les maladies respiratoires. Entièrement privée, elle agit grâce à la générosité de ses donateurs, particuliers et mécènes. Elle a trois missions : financer la recherche scientifique française en pneumologie, organiser des actions d’information et de prévention auprès du grand public et apporter un soutien financier aux malades respiratoires en situation de précarité.</p>
+          <p>Respirer est la chose la plus naturelle au monde, nul besoin d’y penser. Mais quand la respiration devient une souffrance, un combat, rien d’autre n’a plus d’importance. Protéger le souffle, c’est protéger la vie ! C’est dans ce but que la Fondation du Souffle finance la recherche respiratoire.</p>
+          <a class="bouton" href="https://www.lesouffle.org" target="_blank" rel="noopener">Découvrir la Fondation du Souffle</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- La vie de l'asso -->
+    <section class="section">
+      <div class="conteneur">
+        <div class="intro">
+          <h2>La vie de l’asso</h2>
+          <p>Entraînements, sorties nocturnes dans Paris et préparation de la course : quelques moments partagés avec Run For Them.</p>
+        </div>
+        <div class="galerie">
+          <figure class="g-demi"><img src="assets/img/bureau-polos.jpg" alt="Les membres du bureau de Run For Them en polos de l’association" width="1348" height="900" loading="lazy" decoding="async"></figure>
+          <figure class="g-demi"><img src="assets/img/equipe-chateau.jpg" alt="L’équipe Run For Them en t-shirts devant le château de Sceaux" width="1400" height="1115" loading="lazy" decoding="async"></figure>
+          <figure class="g-tiers"><img src="assets/img/nocturne-nuit.jpg" alt="Le groupe devant Notre-Dame de Paris lors d’une sortie nocturne" width="1400" height="1050" loading="lazy" decoding="async"></figure>
+          <figure class="g-tiers"><img src="assets/img/entrainement-groupe.jpg" alt="Photo de groupe après un entraînement" width="768" height="1024" loading="lazy" decoding="async"></figure>
+          <figure class="g-tiers"><img src="assets/img/equipe-course-chateau.jpg" alt="Coureurs de l’association dans l’allée du château de Sceaux" width="900" height="1200" loading="lazy" decoding="async"></figure>
+        </div>
+        <div class="groupe-boutons" style="margin-top:32px">
+          <a class="bouton bouton--contour" href="https://www.instagram.com/rft_estp/" target="_blank" rel="noopener">Suivez-nous sur Instagram</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== PIED DE PAGE (identique sur toutes les pages) ===== -->
+  <footer class="pied">
+    <div class="conteneur">
+      <p class="pied__titre">RUN FOR THEM ESTP</p>
+      <ul class="reseaux"><li><a href="https://www.instagram.com/rft_estp/" target="_blank" rel="noopener" aria-label="Instagram (nouvel onglet)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a></li><li><a href="https://www.facebook.com/asso.runforthem.etp" target="_blank" rel="noopener" aria-label="Facebook (nouvel onglet)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a></li><li><a href="https://strava.app.link/EHk4rvhUuDb" target="_blank" rel="noopener" aria-label="Strava (nouvel onglet)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="currentColor"/><polygon fill="#fff" points="10.2,4.6 5.7,13.4 8.4,13.4 10.2,9.9 12,13.4 14.7,13.4"/><polygon fill="#fff" fill-opacity="0.7" points="14.7,13.4 13.4,16 12.1,13.4 10.2,13.4 13.4,19.6 16.6,13.4"/></svg></a></li><li><a href="https://www.linkedin.com/in/runforthemestp" target="_blank" rel="noopener" aria-label="LinkedIn (nouvel onglet)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></li></ul>
+      <ul class="pied__liens">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="course-2027.html">Course 2027</a></li>
+        <li><a href="entrainements.html">Entraînements</a></li>
+        <li><a href="partenaires.html">Partenaires</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <p class="pied__copyright">© 2026 Run For Them ESTP – Tous droits réservés · Photos : Tournage ESTP</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/menu.js"></script>
+</body>
+</html>

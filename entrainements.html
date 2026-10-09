@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Entraînements – Run For Them ESTP</title>
+  <meta name="description" content="Les entraînements Run For Them : fractionné sur piste le lundi à 18 h, séance encadrée avec Running Conseil le mercredi à 19 h et footings nocturnes dans Paris. Ouverts à tous les niveaux.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Run For Them ESTP">
+  <meta property="og:title" content="Entraînements – Run For Them ESTP">
+  <meta property="og:description" content="Les entraînements Run For Them : fractionné sur piste le lundi à 18 h, séance encadrée avec Running Conseil le mercredi à 19 h et footings nocturnes dans Paris. Ouverts à tous les niveaux.">
+  <meta name="theme-color" content="#231c6e">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="lien-evitement" href="#contenu">Aller au contenu</a>
+
+  <!-- ===== EN-TÊTE (identique sur toutes les pages) ===== -->
+  <header class="entete">
+    <div class="entete__barre">
+      <a class="marque" href="index.html">
+        <img src="assets/img/logo-rft.png" alt="" width="480" height="480">
+        <span>RUN FOR THEM ESTP</span>
+      </a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Ouvrir le menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    <nav class="nav" id="navigation" aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li class="nav__item-sous">
+          <div class="nav__groupe">
+            <a href="course-2027.html">Course 2027</a>
+            <button class="nav__sous-bouton" type="button" aria-expanded="false" aria-controls="sous-menu-course" aria-label="Afficher les éditions précédentes"><svg class="nav__fleche" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+          </div>
+          <ul class="nav__sous-menu" id="sous-menu-course">
+            <li><a href="edition-2026.html">Run For Them Édition 2026</a></li>
+            <li><a href="edition-2025.html">Run For Them Édition 2025</a></li>
+          </ul>
+        </li>
+        <li><a href="entrainements.html" aria-current="page">Entraînements</a></li>
+        <li><a href="partenaires.html">Partenaires</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="bandeau" style="background-image: url('assets/img/equipe-chateau.jpg');">
+      <div class="conteneur bandeau__contenu">
+        <h1>Entraînements</h1>
+        <p>Débutants ou initiés, venez courir avec nous chaque semaine</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="conteneur centre">
+        <h2>Le programme de la semaine</h2>
+        <div class="horaires">
+          <div class="horaire"><strong>Lundi · 18 h</strong><span>Entraînement piste</span></div>
+          <div class="horaire"><strong>Mercredi · 19 h</strong><span>Entraînement avec Running Conseil</span></div>
+        </div>
+        <p class="rdv"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg> RDV au niveau de la grille en bas de l’ESTP</p>
+      </div>
+    </section>
+
+    <section class="section section--lavande">
+      <div class="conteneur cartes">
+        <div class="carte">
+          <h3>Entraînement du lundi</h3>
+          <img src="assets/img/entrainement-piste.jpg" alt="Étudiants en échauffement sur la piste d’athlétisme" width="1599" height="1200" loading="lazy" decoding="async">
+          <p>Séance de fractionné sur piste</p>
+          <p class="detail">Stade Léo Lagrange</p>
+        </div>
+        <div class="carte">
+          <h3>Entraînement du mercredi</h3>
+          <img src="assets/img/entrainement-running-conseil.jpg" alt="Coureurs écoutant les consignes du coach Running Conseil" width="1200" height="540" loading="lazy" decoding="async">
+          <p>Séance Running Conseil</p>
+          <p class="detail">Entraînement encadré par un coach</p>
+        </div>
+        <div class="carte">
+          <h3>Nocturne dans Paris</h3>
+          <img src="assets/img/nocturne-notre-dame.jpg" alt="Le groupe Run For Them avec son drapeau devant Notre-Dame de Paris" width="1400" height="1050" loading="lazy" decoding="async">
+          <p>Footing nocturne à la découverte des monuments de Paris</p>
+          <p class="detail">5 km / 10 km / 15 km</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== PIED DE PAGE (identique sur toutes les pages) ===== -->
+  <footer class="pied">
+    <div class="conteneur">
+      <p class="pied__titre">RUN FOR THEM ESTP</p>
+      <ul class="reseaux"><li><a href="https://www.instagram.com/rft_estp/" target="_blank" rel="noopener" aria-label="Instagram (nouvel onglet)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a></li><li><a href="https://www.facebook.com/asso.runforthem.etp" target="_blank" rel="noopener" aria-label="Facebook (nouvel onglet)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a></li><li><a href="https://strava.app.link/EHk4rvhUuDb" target="_blank" rel="noopener" aria-label="Strava (nouvel onglet)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="currentColor"/><polygon fill="#fff" points="10.2,4.6 5.7,13.4 8.4,13.4 10.2,9.9 12,13.4 14.7,13.4"/><polygon fill="#fff" fill-opacity="0.7" points="14.7,13.4 13.4,16 12.1,13.4 10.2,13.4 13.4,19.6 16.6,13.4"/></svg></a></li><li><a href="https://www.linkedin.com/in/runforthemestp" target="_blank" rel="noopener" aria-label="LinkedIn (nouvel onglet)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></li></ul>
+      <ul class="pied__liens">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="course-2027.html">Course 2027</a></li>
+        <li><a href="entrainements.html">Entraînements</a></li>
+        <li><a href="partenaires.html">Partenaires</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <p class="pied__copyright">© 2026 Run For Them ESTP – Tous droits réservés · Photos : Tournage ESTP</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/menu.js"></script>
+</body>
+</html>

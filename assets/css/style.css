@@ -1,0 +1,398 @@
+/* =========================================================
+   RUN FOR THEM ESTP — Feuille de style commune
+   ---------------------------------------------------------
+   Pour changer une couleur sur tout le site, modifiez
+   uniquement les variables ci-dessous (section :root).
+   ========================================================= */
+
+:root {
+  /* Couleurs de la charte (reprises du site Wix) */
+  --indigo: #231c6e;        /* titres, menu, textes forts */
+  --indigo-fonce: #312a7a;  /* fin du dégradé de l'en-tête */
+  --sable: #e8b97e;         /* début du dégradé de l'en-tête */
+  --caramel: #c68e62;       /* boutons du menu, boutons */
+  --rouille: #9e3a24;       /* bouton actif, accents */
+  --rouge-logo: #a82a1c;    /* fond du logo officiel */
+  --orange: #b5673a;        /* bouton principal */
+  --creme: #f1f2e2;         /* fond section Fondation */
+  --peche: #f7e5d7;         /* fond bloc Contact */
+  --bleu-pale: #cddef0;     /* cartes partenaires */
+  --lavande: #9794ae;       /* fond section Entraînements */
+  --gris: #ededed;          /* fonds neutres */
+  --texte: #2a2740;         /* texte courant */
+  --texte-doux: #5c5970;    /* texte secondaire */
+  --blanc: #ffffff;
+
+  /* Polices */
+  --police-titre: "Oswald", "Arial Narrow", sans-serif;
+  --police-texte: "Jost", "Futura", "Avenir", system-ui, sans-serif;
+
+  /* Mise en page */
+  --largeur-max: 1180px;
+  --rayon: 14px;
+  --ombre: 0 6px 24px rgba(35, 28, 110, 0.12);
+}
+
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--blanc);
+  color: var(--texte);
+  font-family: var(--police-texte);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--indigo); }
+a:hover { color: var(--rouille); }
+h1, h2, h3, h4 {
+  font-family: var(--police-titre);
+  color: var(--indigo);
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0 0 0.6em;
+  letter-spacing: 0.01em;
+}
+h1 { font-size: clamp(2.1rem, 5vw, 3.4rem); }
+h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); }
+h3 { font-size: clamp(1.25rem, 2.4vw, 1.6rem); }
+p { margin: 0 0 1em; }
+:focus-visible { outline: 3px solid var(--rouille); outline-offset: 3px; }
+
+.conteneur {
+  width: 100%;
+  max-width: var(--largeur-max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.centre { text-align: center; }
+.visuellement-cache {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
+.lien-evitement {
+  position: absolute; left: -999px; top: 8px; z-index: 100;
+  background: var(--blanc); padding: 8px 14px; border-radius: 8px;
+}
+.lien-evitement:focus { left: 8px; }
+
+/* ---------- En-tête ---------- */
+.entete {
+  background: linear-gradient(90deg, var(--sable) 0%, #a98a78 48%, var(--indigo-fonce) 100%);
+  position: sticky; top: 0; z-index: 50;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+.entete__barre {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 20px; min-height: 104px;
+  max-width: 1400px; margin: 0 auto; padding: 10px 28px;
+}
+.marque {
+  display: flex; align-items: center; gap: 22px;
+  text-decoration: none; color: var(--indigo);
+}
+.marque img { width: 78px; height: 78px; flex-shrink: 0; }
+.marque span {
+  font-family: var(--police-titre); font-weight: 700;
+  font-size: clamp(1.4rem, 3.2vw, 2.6rem); letter-spacing: 0.01em;
+  line-height: 1; white-space: nowrap;
+}
+.marque:hover { color: var(--indigo); }
+
+.nav ul { list-style: none; margin: 0; padding: 0; }
+.nav > ul { display: flex; gap: 10px; align-items: center; }
+.nav a, .nav button.nav__sous-bouton {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--police-texte); font-size: 1.02rem; font-weight: 500;
+  color: var(--indigo); text-decoration: none;
+  background: var(--caramel); border: 2px solid var(--blanc);
+  border-radius: 999px; padding: 7px 20px; cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+.nav a:hover, .nav button.nav__sous-bouton:hover { background: #d9a57c; color: var(--indigo); }
+.nav a[aria-current="page"] {
+  background: var(--blanc); color: var(--rouille);
+}
+.nav__groupe {
+  display: flex; align-items: center;
+  background: var(--caramel); border: 2px solid var(--blanc); border-radius: 999px;
+  transition: background 0.2s;
+}
+.nav__groupe:hover { background: #d9a57c; }
+.nav .nav__groupe > a, .nav .nav__groupe > button.nav__sous-bouton {
+  background: transparent; border: none; border-radius: 999px;
+}
+.nav .nav__groupe > a { padding: 7px 4px 7px 20px; }
+.nav .nav__groupe > button.nav__sous-bouton { padding: 7px 14px 7px 6px; }
+.nav .actif > .nav__groupe { background: var(--blanc); }
+.nav .actif > .nav__groupe > a, .nav .actif > .nav__groupe > button.nav__sous-bouton { background: transparent; color: var(--rouille); }
+.nav__fleche { width: 12px; height: 12px; transition: transform 0.2s; }
+.nav__item-sous { position: relative; }
+.nav__sous-menu {
+  display: none; position: absolute; top: calc(100% + 8px); left: 0;
+  min-width: 230px; background: var(--blanc); border-radius: 12px;
+  box-shadow: var(--ombre); padding: 8px;
+}
+.nav__sous-menu a {
+  display: block; background: none; border: none; border-radius: 8px;
+  padding: 9px 14px; color: var(--indigo);
+}
+.nav__sous-menu a:hover, .nav__sous-menu a[aria-current="page"] {
+  background: var(--peche); color: var(--rouille);
+}
+.nav__item-sous.ouvert .nav__sous-menu { display: block; }
+.nav__item-sous.ouvert .nav__fleche { transform: rotate(180deg); }
+@media (hover: hover) and (min-width: 1081px) {
+  .nav__item-sous:hover .nav__sous-menu { display: block; }
+  .nav__item-sous:hover .nav__fleche { transform: rotate(180deg); }
+  .nav__sous-menu::before { content: ""; position: absolute; top: -10px; left: 0; right: 0; height: 10px; }
+}
+
+.burger {
+  display: none; background: var(--blanc); border: none; border-radius: 12px;
+  width: 48px; height: 48px; cursor: pointer; color: var(--indigo);
+  align-items: center; justify-content: center;
+}
+.burger svg { width: 26px; height: 26px; }
+
+@media (max-width: 1080px) {
+  .entete__barre { min-height: 80px; padding: 10px 16px; }
+  .marque img { width: 58px; height: 58px; }
+  .marque { gap: 14px; }
+  .burger { display: inline-flex; }
+  .nav {
+    display: none; position: absolute; left: 0; right: 0; top: 100%;
+    background: var(--indigo-fonce); padding: 16px;
+    max-height: calc(100vh - 80px); overflow-y: auto;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+  .nav.ouvert { display: block; }
+  .nav > ul { flex-direction: column; align-items: stretch; gap: 10px; }
+  .nav a, .nav button.nav__sous-bouton { justify-content: center; width: 100%; padding: 11px 20px; font-size: 1.08rem; }
+  .nav .nav__groupe > a { flex: 1; padding: 11px 4px 11px 52px; }
+  .nav .nav__groupe > button.nav__sous-bouton { width: auto; padding: 11px 20px; }
+  .nav__sous-menu { position: static; box-shadow: none; margin-top: 8px; background: rgba(255, 255, 255, 0.08); }
+  .nav__sous-menu a { color: var(--blanc); text-align: center; }
+  .nav__sous-menu a:hover, .nav__sous-menu a[aria-current="page"] { background: var(--blanc); color: var(--rouille); }
+}
+@media (max-width: 420px) {
+  .marque span { font-size: 1.2rem; }
+  .marque img { width: 48px; height: 48px; }
+}
+
+/* ---------- Sections génériques ---------- */
+.section { padding: 80px 0; }
+.section--creme { background: var(--creme); }
+.section--peche { background: var(--peche); }
+.section--gris { background: var(--gris); }
+.section--lavande { background: var(--lavande); }
+.section--indigo { background: var(--indigo); color: var(--blanc); }
+.section--indigo h2, .section--indigo h3 { color: var(--blanc); }
+.intro { max-width: 760px; margin: 0 auto 40px; text-align: center; }
+.chapeau { font-size: 1.2rem; color: var(--texte); }
+
+.bouton {
+  display: inline-block; font-family: var(--police-texte); font-weight: 500;
+  font-size: 1.05rem; text-decoration: none; text-align: center;
+  background: var(--caramel); color: var(--indigo);
+  border: 2px solid var(--caramel); border-radius: 999px;
+  padding: 11px 28px; transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.bouton:hover { background: var(--indigo); border-color: var(--indigo); color: var(--blanc); }
+.bouton--orange { background: var(--orange); border-color: var(--orange); color: var(--blanc); border-radius: 4px; }
+.bouton--orange:hover { background: var(--rouille); border-color: var(--rouille); }
+.bouton--contour { background: transparent; color: var(--indigo); border-color: var(--indigo); }
+.groupe-boutons { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+
+/* Bandeau photo pleine largeur */
+.bandeau {
+  position: relative; min-height: 420px; display: flex; align-items: flex-end;
+  background-size: cover; background-position: center; color: var(--blanc);
+}
+.bandeau::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(35, 28, 110, 0) 35%, rgba(35, 28, 110, 0.75) 100%);
+}
+.bandeau__contenu { position: relative; z-index: 1; padding-bottom: 48px; }
+.bandeau h1 { color: var(--blanc); margin: 0; text-shadow: 0 2px 16px rgba(0, 0, 0, 0.35); }
+.bandeau p { font-size: 1.25rem; margin: 6px 0 0; text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4); }
+.bandeau--court { min-height: 300px; }
+
+/* ---------- Accueil : héros ---------- */
+.heros {
+  position: relative; background-size: cover; background-position: center 40%;
+  padding: 110px 0;
+}
+.heros__panneau {
+  position: relative; max-width: 1000px; margin: 0 auto;
+  background: rgba(49, 42, 122, 0.82); color: var(--blanc);
+  display: grid; grid-template-columns: 1.25fr 1fr auto; align-items: center; gap: 32px;
+  padding: 56px 48px 56px 64px;
+}
+.heros__panneau h1, .heros__panneau h2 { color: var(--blanc); }
+.heros__texte { text-align: center; font-size: 1.12rem; }
+.heros__logo img { width: 100%; max-width: 330px; margin: 0 auto; filter: drop-shadow(0 8px 20px rgba(0,0,0,0.3)); }
+.heros__vertical {
+  writing-mode: vertical-rl; font-family: var(--police-titre); font-weight: 700;
+  font-size: 3rem; color: var(--indigo); letter-spacing: 0.05em; line-height: 1;
+  opacity: 0.9; align-self: stretch; text-align: center; user-select: none;
+}
+@media (max-width: 860px) {
+  .heros { padding: 40px 0; }
+  .heros__panneau { grid-template-columns: 1fr; padding: 40px 24px; margin: 0 16px; gap: 24px; }
+  .heros__logo { order: -1; }
+  .heros__logo img { max-width: 200px; }
+  .heros__vertical { display: none; }
+}
+
+/* Bloc texte + image */
+.duo { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.duo--inverse .duo__media { order: 2; }
+.duo__media img { width: 100%; border-radius: var(--rayon); box-shadow: var(--ombre); }
+.duo__media--rond img { border-radius: 50%; aspect-ratio: 1; object-fit: contain; background: var(--blanc); padding: 8%; box-shadow: none; max-width: 460px; margin: 0 auto; }
+@media (max-width: 860px) {
+  .duo { grid-template-columns: 1fr; gap: 32px; }
+  .duo--inverse .duo__media { order: 0; }
+}
+
+/* Section Fondation du Souffle */
+.fondation__texte { text-align: center; color: var(--indigo); font-size: 1.1rem; line-height: 1.85; }
+.fondation__texte .bouton { margin-top: 10px; }
+
+/* ---------- Galerie photo ---------- */
+.galerie { display: grid; grid-template-columns: repeat(12, 1fr); gap: 12px; }
+.galerie figure { margin: 0; overflow: hidden; border-radius: 10px; background: var(--gris); }
+.galerie img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+.galerie figure:hover img { transform: scale(1.03); }
+.galerie .g-large { grid-column: span 12; aspect-ratio: 16 / 5.5; }
+.galerie .g-demi { grid-column: span 6; aspect-ratio: 3 / 2; }
+.galerie .g-tiers { grid-column: span 4; aspect-ratio: 4 / 3; }
+.galerie .g-portrait { grid-column: span 4; aspect-ratio: 3 / 4; }
+@media (max-width: 700px) {
+  .galerie .g-demi, .galerie .g-tiers, .galerie .g-portrait { grid-column: span 12; }
+  .galerie .g-large { aspect-ratio: 16 / 9; }
+}
+.galerie figcaption, .legende { font-size: 0.9rem; color: var(--texte-doux); padding: 8px 4px 0; }
+
+/* ---------- Cartes (Entraînements, parcours) ---------- */
+.cartes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.cartes--2 { grid-template-columns: repeat(2, 1fr); }
+.carte {
+  background: var(--blanc); border-radius: var(--rayon); padding: 28px 26px 30px;
+  box-shadow: var(--ombre); text-align: center;
+}
+.carte h3 { padding-bottom: 12px; border-bottom: 4px solid var(--indigo); margin-bottom: 20px; }
+.carte img { width: 100%; aspect-ratio: 1.1; object-fit: cover; border-radius: 10px; border: 3px solid var(--gris); margin-bottom: 18px; }
+.carte--carte img { aspect-ratio: auto; object-fit: contain; background: var(--gris); }
+.carte p { margin: 0; }
+.carte .detail { color: var(--texte-doux); }
+@media (max-width: 960px) { .cartes { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; } .cartes--2 { max-width: 620px; } }
+
+/* Horaires (Entraînements) */
+.horaires { display: flex; flex-wrap: wrap; gap: 18px; justify-content: center; margin: 28px 0 10px; }
+.horaire {
+  background: var(--blanc); border-radius: var(--rayon); padding: 18px 26px;
+  box-shadow: var(--ombre); text-align: center; min-width: 240px;
+}
+.horaire strong { display: block; font-family: var(--police-titre); font-size: 1.5rem; color: var(--indigo); font-weight: 600; }
+.horaire span { color: var(--texte-doux); }
+.rdv {
+  display: inline-flex; align-items: center; gap: 10px; background: var(--indigo); color: var(--blanc);
+  border-radius: 999px; padding: 10px 22px; margin-top: 12px;
+}
+.rdv svg { width: 20px; height: 20px; flex-shrink: 0; }
+
+/* ---------- Pages d'édition ---------- */
+.puces-distances { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 24px 0 8px; padding: 0; list-style: none; }
+.puces-distances li {
+  font-family: var(--police-titre); font-size: 1.3rem; font-weight: 500; color: var(--indigo);
+  background: var(--blanc); border: 2px solid var(--indigo); border-radius: 999px; padding: 6px 22px;
+}
+.infos { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 24px; }
+.info {
+  background: var(--blanc); border-radius: var(--rayon); padding: 26px 28px;
+  border-top: 5px solid var(--caramel); box-shadow: var(--ombre);
+}
+.info h3 { margin-bottom: 12px; }
+.info ul { margin: 0; padding-left: 1.2em; }
+.info li { margin-bottom: 0.6em; }
+.info p:last-child, .info ul:last-child { margin-bottom: 0; }
+.attention {
+  background: var(--peche); border-left: 5px solid var(--rouille); border-radius: 8px;
+  padding: 12px 16px; margin-top: 14px; font-size: 0.98rem;
+}
+.attention strong { color: var(--rouille); }
+.lieu { display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center; }
+.lieu img { border-radius: 10px; box-shadow: var(--ombre); width: 100%; max-width: 340px; }
+.lieu > div { min-width: 0; }
+.lieu__adresse { font-family: var(--police-titre); font-size: 1.5rem; color: var(--indigo); font-weight: 500; line-height: 1.3; }
+@media (max-width: 760px) { .lieu { grid-template-columns: 1fr; } .lieu img { margin: 0 auto; } .info { padding: 22px 20px; } }
+
+.tableau-horaires { width: 100%; border-collapse: collapse; }
+.tableau-horaires th, .tableau-horaires td { padding: 8px 4px; border-bottom: 1px solid var(--gris); text-align: left; }
+.tableau-horaires td:last-child { text-align: right; font-weight: 600; color: var(--indigo); white-space: nowrap; }
+
+.souvenirs { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 32px; align-items: start; }
+.souvenir { text-align: center; }
+.souvenir img { margin: 0 auto 14px; border-radius: 10px; background: var(--blanc); }
+.souvenir--large { grid-column: 1 / -1; }
+
+/* Encadré « Informations à venir » */
+.a-venir {
+  max-width: 720px; margin: 0 auto; text-align: center;
+  background: var(--blanc); border: 3px dashed var(--caramel); border-radius: var(--rayon);
+  padding: 36px 28px;
+}
+.a-venir h2 { margin-bottom: 8px; }
+.a-venir p { margin: 0; color: var(--texte-doux); }
+
+/* Médaillon Fondation (page Course 2027) */
+.medaillon { width: 170px; height: 170px; border-radius: 50%; background: var(--blanc); padding: 18px; box-shadow: var(--ombre); flex-shrink: 0; }
+.medaillon img { width: 100%; height: 100%; object-fit: contain; }
+.titre-course { display: flex; align-items: center; justify-content: center; gap: 40px; text-align: left; }
+.titre-course > div { max-width: 640px; }
+@media (max-width: 760px) { .titre-course { flex-direction: column; text-align: center; gap: 24px; } }
+
+/* ---------- Partenaires ---------- */
+.partenaire { display: grid; grid-template-columns: 1fr 1.3fr; gap: 48px; align-items: center; margin-bottom: 64px; }
+.partenaire:last-child { margin-bottom: 0; }
+.partenaire__logo { background: var(--blanc); border-radius: var(--rayon); padding: 32px; display: flex; align-items: center; justify-content: center; min-height: 280px; }
+.partenaire__logo img { max-height: 300px; width: auto; }
+.partenaire__texte { background: var(--bleu-pale); border-radius: var(--rayon); padding: 36px 40px; color: var(--indigo); }
+.partenaire__texte h2 { font-size: 1.9rem; margin-bottom: 14px; }
+@media (max-width: 860px) {
+  .partenaire { grid-template-columns: 1fr; gap: 20px; }
+  .partenaire__logo { min-height: 0; }
+  .partenaire__logo img { max-height: 200px; }
+  .partenaire__texte { padding: 28px 24px; }
+}
+
+/* ---------- Contact ---------- */
+.contact-bloc { background: var(--peche); padding: 56px 64px; }
+.contact-grille { display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; margin-top: 24px; }
+.contact-bloc h3 { font-size: 1.35rem; margin-bottom: 8px; }
+.contact-email { font-size: 1.25rem; word-break: break-word; }
+.contact-bloc .bouton { margin-top: 18px; }
+@media (max-width: 760px) {
+  .contact-bloc { padding: 36px 22px; }
+  .contact-grille { grid-template-columns: 1fr; }
+}
+
+/* ---------- Réseaux sociaux ---------- */
+.reseaux { display: flex; gap: 14px; list-style: none; padding: 0; margin: 0; align-items: center; }
+.reseaux a { display: inline-flex; width: 40px; height: 40px; align-items: center; justify-content: center; color: #111; border-radius: 50%; transition: color 0.2s, transform 0.2s; }
+.reseaux a:hover { color: var(--rouille); transform: translateY(-2px); }
+.reseaux svg { width: 30px; height: 30px; }
+
+/* ---------- Pied de page ---------- */
+.pied { background: var(--blanc); padding: 56px 0 36px; text-align: center; border-top: 1px solid var(--gris); }
+.pied__titre { font-family: var(--police-titre); font-weight: 600; color: var(--indigo); font-size: 2rem; margin: 0 0 18px; }
+.pied .reseaux { justify-content: center; margin-bottom: 18px; }
+.pied__copyright { font-size: 0.92rem; color: var(--texte-doux); margin: 0; }
+.pied__liens { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 20px; list-style: none; padding: 0; margin: 0 0 16px; font-size: 0.95rem; }
+.pied__liens a { color: var(--texte-doux); text-decoration: none; }
+.pied__liens a:hover { color: var(--rouille); text-decoration: underline; }
